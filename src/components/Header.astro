@@ -1,7 +1,6 @@
 ---
 import { NAVS } from '@/config'
 import Logo from '@/components/icons/Logo.astro'
-import ThemeSwitcher from '@/components/ThemeSwitcher.astro'
 
 const currentPath = Astro.url.pathname
 const lastSlashRegex = /\/$/
@@ -30,8 +29,6 @@ const normalizedCurrentPath = currentPath.replace(lastSlashRegex, '')
       )
     })
   }
-
-  <ThemeSwitcher />
 </header>
 
 <style>
