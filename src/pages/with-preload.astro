@@ -4,8 +4,8 @@ import Card from '@/components/Card.astro'
 import PreloadImage from '@/components/PreloadImages.astro'
 import { CARDS } from '@/config'
 
-const title = 'Page 2'
-const description = 'Page 2'
+const title = 'With preload'
+const description = 'Demo of a background image used through CSS but preloaded with a head link'
 
 const imgsToPreload = [...new Set(CARDS.map(({ variant }) => `/${variant}.jpg`))]
 ---
