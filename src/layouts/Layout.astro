@@ -32,6 +32,7 @@ const { description, title } = Astro.props
       description={description}
       title={title}
     />
+    <slot name='head' />
   </head>
   <body>
     <Header />
