@@ -9,14 +9,13 @@ const normalizedCurrentPath = currentPath.replace(lastSlashRegex, '')
 
 <header>
   {
-    NAVS.map(({ accessibleText, href, name }, index) => {
+    NAVS.map(({ accessibleText, href, name }) => {
       const isSelected = href.length > 1 && normalizedCurrentPath === href
       return (
         <a
           href={href}
           class:list={[
             {
-              separated: index === 1,
               selected: isSelected,
               logo: href === '/',
               link: href !== '/',
@@ -36,7 +35,7 @@ const normalizedCurrentPath = currentPath.replace(lastSlashRegex, '')
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: auto;
     gap: 1rem;
   }
@@ -66,10 +65,6 @@ const normalizedCurrentPath = currentPath.replace(lastSlashRegex, '')
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.35s ease-out;
-  }
-
-  .separated {
-    margin-left: auto;
   }
 
   .selected::after {
