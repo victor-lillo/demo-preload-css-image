@@ -11,21 +11,8 @@ export type NavigationObjects = {
   name: string
 }[]
 
-export type SocialObjects = {
-  name: SocialMedia
-  href: string
-  linkTitle: string
-}[]
-
-export type SocialIcons = {
-  [social in SocialMedia]: string
-}
-
-export type SocialMedia = 'Github' | 'LinkedIn' | 'Mail'
-
-export enum Icons {
-  Github = 'Github',
-  LinkedIn = 'LinkedIn',
-  Mail = 'Mail',
-  Npm = 'Npm',
+export interface Card {
+  body: string
+  title: string
+  variant: 'flamingo-1' | 'flamingo-2' | 'flamingo-3' | 'flamingo-4'
 }
