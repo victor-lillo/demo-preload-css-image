@@ -1,0 +1,45 @@
+---
+import '@/styles/classes.css'
+import '@/styles/normalize.css'
+import '@/styles/reset.local.css'
+import '@/styles/tokens.css'
+
+import Header from '@/components/Header.astro'
+import SEO from '@/components/SEO.astro'
+
+interface Props {
+  description: string
+  title: string
+}
+
+const { description, title } = Astro.props
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      href='/favicon.svg'
+    />
+    <SEO
+      description={description}
+      title={title}
+    />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <style>
+      html {
+        background: var(--background-color);
+      }
+    </style>
+  </body>
+</html>
