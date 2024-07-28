@@ -1,5 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import Card from '@/components/Card.astro'
+import { CARDS } from '../config'
 
 const title = 'Page 1'
 const description = 'Page 1'
@@ -9,19 +11,10 @@ const description = 'Page 1'
   description={description}
   title={title}
 >
-  <main>Page 1</main>
+  <main>
+    <h1>Without Preload</h1>
+    <ul>
+      {CARDS.map((props) => <Card {...props} />)}
+    </ul>
+  </main>
 </Layout>
-
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    font-size: 20px;
-    line-height: 1.6;
-    gap: 1.5rem;
-  }
-</style>

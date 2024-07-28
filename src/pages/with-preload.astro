@@ -1,27 +1,27 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import Card from '@/components/Card.astro'
+import PreloadImage from '@/components/PreloadImages.astro'
+import { CARDS } from '@/config'
 
 const title = 'Page 2'
 const description = 'Page 2'
+
+const imgsToPreload = [...new Set(CARDS.map(({ variant }) => `/${variant}.jpg`))]
 ---
 
 <Layout
   description={description}
   title={title}
 >
-  <main>Page 2</main>
+  <PreloadImage
+    links={imgsToPreload}
+    slot='head'
+  />
+  <main>
+    <h1>With Preload</h1>
+    <ul>
+      {CARDS.map((props) => <Card {...props} />)}
+    </ul>
+  </main>
 </Layout>
-
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    font-size: 20px;
-    line-height: 1.6;
-    gap: 1.5rem;
-  }
-</style>
