@@ -1,4 +1,4 @@
-import type { NavigationObjects, Site, SocialObjects } from './types'
+import type { NavigationObjects, Site, Card } from './types'
 
 export const SITE: Site = {
   description: 'Your meta description.',
@@ -19,21 +19,13 @@ export const NAVS: NavigationObjects = [
   },
 ]
 
-export const SOCIALS: SocialObjects = [
-  {
-    name: 'Github',
-    href: 'yourhref.com',
-    linkTitle: ` ${SITE.name} on Github`,
-  },
-
-  {
-    name: 'LinkedIn',
-    href: 'yourhref.com',
-    linkTitle: `${SITE.name} on LinkedIn`,
-  },
-  {
-    name: 'Mail',
-    href: 'mailto:yourmail@gmail.com',
-    linkTitle: `Send an email to ${SITE.name}`,
-  },
+export const CARDS: Card[] = [
+  { title: 'Title 1', body: 'This is a body', variant: 'flamingo-1' },
+  { title: 'Title 2', body: 'This is another body', variant: 'flamingo-2' },
+  { title: 'Title 3', body: 'This is yet another body', variant: 'flamingo-3' },
+  { title: 'Title 4', body: 'This is a different body', variant: 'flamingo-4' },
+  { title: 'Title 5', body: 'This is a body again', variant: 'flamingo-1' },
+  { title: 'Title 6', body: 'This is another body again', variant: 'flamingo-2' },
+  { title: 'Title 7', body: 'This is yet another body again', variant: 'flamingo-3' },
+  { title: 'Title 8', body: 'This is a different body again', variant: 'flamingo-4' },
 ]
