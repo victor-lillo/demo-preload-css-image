@@ -10,17 +10,12 @@ export const LOCALE = ['en-EN']
 
 export const NAVS: NavigationObjects = [
   {
-    name: 'Your site logo',
-    href: '/',
-    accessibleText: 'Your site home page',
+    name: 'Without Preload',
+    href: '/without-preload',
   },
   {
-    name: 'Page 1',
-    href: '/page-1',
-  },
-  {
-    name: 'Page 2',
-    href: '/page-2',
+    name: 'With Preload',
+    href: '/with-preload',
   },
 ]
 
