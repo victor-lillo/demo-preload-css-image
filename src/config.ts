@@ -1,9 +1,8 @@
 import type { NavigationObjects, Site, Card } from './types'
 
 export const SITE: Site = {
-  description: 'Your meta description.',
-  name: 'Your Site Template',
-  website: 'https://your-site.template',
+  name: 'Demo Preload CSS images',
+  website: 'https://demo-preload-css-image.victorlillo.dev',
 }
 
 export const LOCALE = ['en-EN']

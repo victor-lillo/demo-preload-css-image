@@ -1,5 +1,4 @@
 export interface Site {
-  description: string
   name: string
   website: string
 }
