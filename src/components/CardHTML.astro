@@ -1,0 +1,58 @@
+---
+import type { Card } from '@/types'
+
+type Props = Card
+
+const { body, title, variant } = Astro.props
+---
+
+<li class='link-card'>
+  <h2>{title}</h2>
+  <p>{body}</p>
+  <img
+    src={`${variant}.jpg`}
+    alt=''
+  />
+</li>
+
+<style>
+  .link-card {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-radius: var(--border-radius-1);
+    height: 180px;
+    position: relative;
+    contain: paint;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: translateY(-50%);
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  h2,
+  p {
+    color: var(--color-dark-1);
+    font-weight: 600;
+    background-color: #ffffff8e;
+    border-radius: var(--border-radius-1);
+    padding-inline: 0.6rem;
+  }
+</style>
