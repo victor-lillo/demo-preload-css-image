@@ -3,7 +3,7 @@ import Layout from '@/layouts/Layout.astro'
 import Card from '@/components/CardHTML.astro'
 import { CARDS } from '../config'
 
-const title = 'Without preload'
+const title = 'Image in HTML'
 const description = 'Demo of a background image used through HTML'
 ---
 
@@ -12,7 +12,7 @@ const description = 'Demo of a background image used through HTML'
   title={title}
 >
   <main>
-    <h1>Without Preload</h1>
+    <h1>Image in HTML</h1>
     <ul>
       {CARDS.map((props) => <Card {...props} />)}
     </ul>
