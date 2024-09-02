@@ -16,6 +16,10 @@ export const NAVS: NavigationObjects = [
     name: 'With Preload',
     href: '/with-preload',
   },
+  {
+    name: 'In HTML',
+    href: '/image-in-html',
+  },
 ]
 
 export const CARDS: Card[] = [
